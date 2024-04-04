@@ -13,11 +13,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Presentacion Layer", "4.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LINQ.WebAPI", "LINQ.WebAPI\LINQ.WebAPI.csproj", "{724C3C5B-C76C-4108-9759-6CA79D219128}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ.ApplicationLayer", "LINQ.ApplicationLayer\LINQ.ApplicationLayer.csproj", "{D9619DC6-5758-4FCE-B783-5334ADC0F5B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LINQ.ApplicationLayer", "LINQ.ApplicationLayer\LINQ.ApplicationLayer.csproj", "{D9619DC6-5758-4FCE-B783-5334ADC0F5B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ.InfrastructureLayer", "LINQ.InfrastructureLayer\LINQ.InfrastructureLayer.csproj", "{3B4294A8-7F1C-4F2E-AFC5-E197111A3F19}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LINQ.InfrastructureLayer", "LINQ.InfrastructureLayer\LINQ.InfrastructureLayer.csproj", "{3B4294A8-7F1C-4F2E-AFC5-E197111A3F19}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ.DomainLayer", "LINQ.DomainLayer\LINQ.DomainLayer.csproj", "{BEEA86C8-8F51-4AF8-B8C0-14D6987ECC83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LINQ.DomainLayer", "LINQ.DomainLayer\LINQ.DomainLayer.csproj", "{BEEA86C8-8F51-4AF8-B8C0-14D6987ECC83}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
