@@ -10,14 +10,14 @@ namespace LINQ.InfrastructureLayer.Data.Context
         public DbSet<CategoryEntity> Categories { get; set; }
         public DbSet<CustomerEntity> Customers { get; set; }
         public DbSet<EmployeeEntity> Employees { get; set; }
-        public DbSet<EmployeeTerritoryEntity> EmployeeTerritories { get; set; }
-        public DbSet<OrderDetailEntity> OrderDetails { get; set; }
         public DbSet<OrderEntity> Orders { get; set; }
         public DbSet<ProductEntity> Products { get; set; }
         public DbSet<RegionEntity> Regions { get; set; }
         public DbSet<ShipperEntity> Shippers { get; set; }
         public DbSet<SupplierEntity> Suppliers { get; set; }
         public DbSet<TerritoryEntity> Territories { get; set; }
+        public DbSet<EmployeeTerritoryEntity> EmployeeTerritories { get; set; }
+        public DbSet<OrderDetailEntity> OrderDetails { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
