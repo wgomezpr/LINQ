@@ -16,12 +16,12 @@ namespace LINQ.InfrastructureLayer.Repositories
 
         public CategoryEntity Get(int CategoryID)
         {
-            throw new NotImplementedException();
+            return _context.Categories.Where(x => x.CategoryID == CategoryID).FirstOrDefault() ?? new CategoryEntity();
         }
 
         public IList<CategoryEntity> GetAll()
         {
-            throw new NotImplementedException();
+            return _context.Categories.ToList();
         }
 
         public int Insert(CategoryEntity entity)
