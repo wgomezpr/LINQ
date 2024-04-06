@@ -2,7 +2,6 @@
 using LINQ.ApplicationLayer.Services.ProductService;
 using LINQ.DomainLayer.DTO.Entities;
 using Microsoft.AspNetCore.Mvc;
-using System.Linq;
 
 namespace LINQ.WebAPI.Controllers
 {
@@ -20,7 +19,10 @@ namespace LINQ.WebAPI.Controllers
             _productService = productService;
         }
 
-        //1.  Unir dos listas y eliminar duplicados.
+        /// <summary>
+        /// 1.  Unir dos listas y eliminar duplicados.
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IList<int> Ejercicio01()
         {
@@ -33,7 +35,10 @@ namespace LINQ.WebAPI.Controllers
             return sinDuplicados;
         }
 
-        //2.  Obtener el promedio de una lista de números decimales.
+        /// <summary>
+        /// 2.  Obtener el promedio de una lista de números decimales.
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public double Ejercicio02()
         {
@@ -42,7 +47,10 @@ namespace LINQ.WebAPI.Controllers
             return numeros.Average();
         }
 
-        //3.  Ordenar una lista de cadenas alfabéticamente.
+        /// <summary>
+        /// 3.  Ordenar una lista de cadenas alfabéticamente.
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IList<string> Ejercicio03()
         {
@@ -51,7 +59,10 @@ namespace LINQ.WebAPI.Controllers
             return palabras.OrderBy(x => x).ToList();
         }
 
-        //4.  Encontrar los elementos comunes entre dos listas.
+        /// <summary>
+        /// 4.  Encontrar los elementos comunes entre dos listas.
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IList<int> Ejercicio04()
         {
@@ -63,7 +74,10 @@ namespace LINQ.WebAPI.Controllers
             return comunes;
         }
 
-        //5.  Obtener la suma de los valores de una propiedad de una lista de objetos.
+        /// <summary>
+        /// 5.  Obtener la suma de los valores de una propiedad de una lista de objetos.
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public decimal Ejercicio05()
         {
@@ -78,7 +92,10 @@ namespace LINQ.WebAPI.Controllers
             return suma;
         }
 
-        //6.  Obtener los elementos que se encuentran en una lista pero no en otra.
+        /// <summary>
+        /// 6.  Obtener los elementos que se encuentran en una lista pero no en otra.
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IList<int> Ejercicio06()
         {
@@ -90,7 +107,10 @@ namespace LINQ.WebAPI.Controllers
             return comunes;
         }
 
-        //7.  Filtrar una lista de objetos por múltiples condiciones.
+        /// <summary>
+        /// 7.  Filtrar una lista de objetos por múltiples condiciones.
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IList<CategoryEntity> Ejercicio07()
         {
@@ -106,7 +126,10 @@ namespace LINQ.WebAPI.Controllers
             return categorias1;
         }
 
-        //8.  Dividir una lista en grupos de un tamaño específico.
+        /// <summary>
+        /// 8.  Dividir una lista en grupos de un tamaño específico.
+        /// </summary>
+        /// <returns></returns>
         //[HttpGet]
         //public IList<CategoryEntity> Ejercicio07()
         //{
@@ -122,7 +145,10 @@ namespace LINQ.WebAPI.Controllers
         //    return categorias1;
         //}
 
-        //9.  Encontrar el primer y el último elemento de una lista.
+        /// <summary>
+        /// 9.  Encontrar el primer y el último elemento de una lista.
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IList<CategoryEntity> Ejercicio08()
         {
@@ -140,7 +166,10 @@ namespace LINQ.WebAPI.Controllers
             return categoriasaux;
         }
 
-        //10. Obtener los elementos que se repiten más de una vez en una lista.
+        /// <summary>
+        /// 10. Obtener los elementos que se repiten más de una vez en una lista.
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IList<int> Ejercicio10()
         {

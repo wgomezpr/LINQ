@@ -17,7 +17,7 @@ namespace LINQ.WebAPI.Controllers
         }
 
         /// <summary>
-        /// Obtener todos los números pares de una lista de enteros.
+        /// 1. Obtener todos los números pares de una lista de enteros.
         /// </summary>
         /// <returns></returns>
         [HttpGet]
@@ -30,7 +30,11 @@ namespace LINQ.WebAPI.Controllers
 
             return numerospares;
         }
-        //2. Encontrar la suma de todos los elementos en una lista de enteros.
+
+        /// <summary>
+        /// 2. Encontrar la suma de todos los elementos en una lista de enteros.
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public int Ejercicio02()
         {
@@ -40,7 +44,10 @@ namespace LINQ.WebAPI.Controllers
             return suma;
         }
 
-        //3. Filtrar una lista de cadenas para obtener aquellas que empiecen con la letra 'C'.
+        /// <summary>
+        /// 3. Filtrar una lista de cadenas para obtener aquellas que empiecen con la letra 'C'.
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IList<CategoryEntity> Ejercicio03()
         {
@@ -55,7 +62,10 @@ namespace LINQ.WebAPI.Controllers
             return categories;
         }
 
-        //4. Encontrar el número más grande en una lista de enteros.
+        /// <summary>
+        /// 4. Encontrar el número más grande en una lista de enteros.
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public int Ejercicio04()
         {
@@ -70,7 +80,10 @@ namespace LINQ.WebAPI.Controllers
             return max;
         }
 
-        //5. Obtener la cantidad de elementos en una lista.
+        /// <summary>
+        /// 5. Obtener la cantidad de elementos en una lista.
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public int Ejercicio05()
         {
@@ -85,7 +98,10 @@ namespace LINQ.WebAPI.Controllers
             return cantidad;
         }
 
-        //6. Ordenar una lista de enteros en orden ascendente.
+        /// <summary>
+        /// 6. Ordenar una lista de enteros en orden ascendente.
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IList<int> Ejercicio06()
         {
@@ -95,7 +111,10 @@ namespace LINQ.WebAPI.Controllers
             return ordenado;
         }
 
-        //7. Obtener los elementos distintos de una lista de cadenas.
+        /// <summary>
+        /// 7. Obtener los elementos distintos de una lista de cadenas.
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IList<string> Ejercicio07()
         {
@@ -105,7 +124,10 @@ namespace LINQ.WebAPI.Controllers
             return ordenado;
         }
 
-        //8. Filtrar una lista de objetos para obtener aquellos que cumplan cierta condición.
+        /// <summary>
+        /// 8. Filtrar una lista de objetos para obtener aquellos que cumplan cierta condición.
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IList<CategoryEntity> Ejercicio08()
         {
@@ -119,7 +141,10 @@ namespace LINQ.WebAPI.Controllers
             return categorias;
         }
 
-        //9. Obtener el primer elemento de una lista que cumpla cierta condición.
+        /// <summary>
+        /// 9. Obtener el primer elemento de una lista que cumpla cierta condición.
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IList<CategoryEntity> Ejercicio09()
         {
@@ -133,7 +158,10 @@ namespace LINQ.WebAPI.Controllers
             return categorias;
         }
 
-        //10. Contar cuántas veces aparece un elemento específico en una lista.
+        /// <summary>
+        /// 10. Contar cuántas veces aparece un elemento específico en una lista.
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public int Ejercicio10()
         {
