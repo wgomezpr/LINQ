@@ -2,15 +2,15 @@
 {
     public class ProductEntity
     {
-        public int ProductID { get; set; }
+        public Int64 ProductID { get; set; }
         public string ProductName { get; set; }
-        public int SupplierID { get; set; }
-        public int CategoryID { get; set; }
+        public Int64 SupplierID { get; set; }
+        public Int64 CategoryID { get; set; }
         public string QuantityPerUnit { get; set; }
         public decimal UnitPrice { get; set; }
-        public long UnitsInStock { get; set; }
-        public long UnitsOnOrder { get; set; }
-        public long ReorderLevel { get; set; }
+        public decimal UnitsInStock { get; set; }
+        public Int64 UnitsOnOrder { get; set; }
+        public Int64 ReorderLevel { get; set; }
         public bool Discontinued { get; set; }
     }
 }

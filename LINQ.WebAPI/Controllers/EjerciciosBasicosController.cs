@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using LINQ.ApplicationLayer.Services.CategoryService;
+using LINQ.DomainLayer.DTO.Entities;
+using Microsoft.AspNetCore.Mvc;
 
 namespace LINQ.WebAPI.Controllers
 {
@@ -6,16 +8,147 @@ namespace LINQ.WebAPI.Controllers
     [ApiController]
     public class EjerciciosBasicosController : ControllerBase
     {
-        //1. Obtener todos los números pares de una lista de enteros.
+        // Instantiate the Service
+        private readonly ICategoryService _service;
+
+        public EjerciciosBasicosController(ICategoryService service)
+        {
+            _service = service;
+        }
+
+        /// <summary>
+        /// Obtener todos los números pares de una lista de enteros.
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public IList<int> Ejercicio01()
+        {
+            IList<int> numeros = Enumerable.Range(1, 10).ToList();
+
+            //var numerospares = (from numero in numeros where numero % 2 == 0 select numero).ToList();
+            var numerospares = numeros.Where(x => x % 2 == 0).ToList();
+
+            return numerospares;
+        }
         //2. Encontrar la suma de todos los elementos en una lista de enteros.
-        //3. Filtrar una lista de cadenas para obtener aquellas que empiecen con la letra 'A'.
+        [HttpGet]
+        public int Ejercicio02()
+        {
+            IList<int> numeros = new List<int> { 10, 20, 100 };
+            var suma = numeros.Sum();
+
+            return suma;
+        }
+
+        //3. Filtrar una lista de cadenas para obtener aquellas que empiecen con la letra 'C'.
+        [HttpGet]
+        public IList<CategoryEntity> Ejercicio03()
+        {
+            IList<CategoryEntity> categories = new List<CategoryEntity>();
+
+            var res = _service.GetAll();
+            if (res.Status)
+            {
+                categories = res.Value.Where(x => x.CategoryName.StartsWith("C")).ToList();
+            }
+
+            return categories;
+        }
+
         //4. Encontrar el número más grande en una lista de enteros.
+        [HttpGet]
+        public int Ejercicio04()
+        {
+            int max = 0;
+
+            var res = _service.GetAll();
+            if (res.Status)
+            {
+                max = res.Value.Max(x => x.CategoryID);
+            }
+
+            return max;
+        }
+
         //5. Obtener la cantidad de elementos en una lista.
+        [HttpGet]
+        public int Ejercicio05()
+        {
+            int cantidad = 0;
+
+            var res = _service.GetAll();
+            if (res.Status)
+            {
+                cantidad = res.Value.Count();
+            }
+
+            return cantidad;
+        }
+
         //6. Ordenar una lista de enteros en orden ascendente.
+        [HttpGet]
+        public IList<int> Ejercicio06()
+        {
+            IList<int> numeros = new List<int> { 10, 8, 1, 7, 4, 5, 2, 3, 6, 9 };
+            var ordenado = numeros.Order().ToList();
+
+            return ordenado;
+        }
+
         //7. Obtener los elementos distintos de una lista de cadenas.
+        [HttpGet]
+        public IList<string> Ejercicio07()
+        {
+            IList<string> numeros = new List<string> { "Cuaderno", "PC", "Frutas", "Cuaderno", "PC" };
+            var ordenado = numeros.Distinct().ToList();
+
+            return ordenado;
+        }
+
         //8. Filtrar una lista de objetos para obtener aquellos que cumplan cierta condición.
+        [HttpGet]
+        public IList<CategoryEntity> Ejercicio08()
+        {
+            IList<CategoryEntity> categorias = new List<CategoryEntity>();
+            var res = _service.GetAll();
+            if (res.Status)
+            {
+                categorias = res.Value.Where(x => x.CategoryName.Contains("e")).ToList();
+            }
+
+            return categorias;
+        }
+
         //9. Obtener el primer elemento de una lista que cumpla cierta condición.
+        [HttpGet]
+        public IList<CategoryEntity> Ejercicio09()
+        {
+            IList<CategoryEntity> categorias = new List<CategoryEntity>();
+            var res = _service.GetAll();
+            if (res.Status)
+            {
+                categorias = res.Value.Where(x => x.CategoryName.EndsWith("s")).ToList().Take(1).ToList();
+            }
+
+            return categorias;
+        }
+
         //10. Contar cuántas veces aparece un elemento específico en una lista.
+        [HttpGet]
+        public int Ejercicio10()
+        {
+            int cantidad = 0;
+
+            var res = _service.GetAll();
+            if (res.Status)
+            {
+                cantidad = res.Value.Where(x => x.CategoryName.EndsWith("s")).ToList().Count();
+
+            }
+
+            return cantidad;
+        }
+
         //11. Encontrar el número más pequeño en una lista de enteros.
         //12. Obtener la concatenación de todas las cadenas en una lista.
         //13. Filtrar una lista de objetos para obtener los que no cumplen una condición.

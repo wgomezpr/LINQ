@@ -16,12 +16,12 @@ namespace LINQ.InfrastructureLayer.Repositories
 
         public ProductEntity Get(int ProductID)
         {
-            throw new NotImplementedException();
+           return _context.Products.Where(x => x.ProductID == ProductID).FirstOrDefault() ?? new ProductEntity();
         }
 
         public IList<ProductEntity> GetAll()
         {
-            throw new NotImplementedException();
+            return _context.Products.ToList();
         }
 
         public int Insert(ProductEntity entity)
