@@ -30,6 +30,7 @@ namespace LINQ.WebAPI.ServiceCollection
             services.AddScoped<IShipper, ShipperRepository>();
             services.AddScoped<ISupplier, SupplierRepository>();
             services.AddScoped<ITerritory, TerritoryRepository>();
+
             // Application Service
             services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<ICustomerService, CustomerService>();

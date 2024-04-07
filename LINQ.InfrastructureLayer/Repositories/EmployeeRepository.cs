@@ -1,6 +1,7 @@
 ﻿using LINQ.DomainLayer.DTO.Entities;
 using LINQ.DomainLayer.Interfaces;
 using LINQ.InfrastructureLayer.Data.Context;
+using Microsoft.EntityFrameworkCore;
 
 namespace LINQ.InfrastructureLayer.Repositories
 {
@@ -16,27 +17,41 @@ namespace LINQ.InfrastructureLayer.Repositories
 
         public EmployeeEntity Get(int EmployeeID)
         {
-            throw new NotImplementedException();
+            return _context.Employees.Where(x => x.EmployeeID == EmployeeID).FirstOrDefault() ?? new EmployeeEntity();
         }
 
         public IList<EmployeeEntity> GetAll()
         {
-            throw new NotImplementedException();
+            return _context.Employees.ToList();
         }
 
         public int Insert(EmployeeEntity entity)
         {
-            throw new NotImplementedException();
+            _context.Entry(entity).State = EntityState.Added;
+            _context.Employees.Add(entity);
+            _context.SaveChanges();
+
+            return entity.EmployeeID;
         }
 
         public int Update(EmployeeEntity entity)
         {
-            throw new NotImplementedException();
+            _context.Entry(entity).State = EntityState.Modified;
+            _context.Employees.Update(entity);
+            _context.SaveChanges();
+
+            return entity.EmployeeID;
         }
 
         public int Delete(int EmployeeID)
         {
-            throw new NotImplementedException();
+            var obj = _context.Employees.First(x => x.EmployeeID == EmployeeID);
+
+            _context.Entry(obj).State = EntityState.Deleted;
+            _context.Employees.Remove(obj);
+            _context.SaveChanges();
+
+            return EmployeeID;
         }
     }
 }

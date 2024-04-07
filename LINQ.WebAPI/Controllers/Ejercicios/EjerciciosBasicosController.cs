@@ -2,7 +2,7 @@
 using LINQ.DomainLayer.DTO.Entities;
 using Microsoft.AspNetCore.Mvc;
 
-namespace LINQ.WebAPI.Controllers
+namespace LINQ.WebAPI.Controllers.Ejercicios
 {
     [Route("api/[controller]/[action]")]
     [ApiController]

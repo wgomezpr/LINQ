@@ -3,7 +3,7 @@ using LINQ.ApplicationLayer.Services.ProductService;
 using LINQ.DomainLayer.DTO.Entities;
 using Microsoft.AspNetCore.Mvc;
 
-namespace LINQ.WebAPI.Controllers
+namespace LINQ.WebAPI.Controllers.Ejercicios
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
@@ -173,7 +173,7 @@ namespace LINQ.WebAPI.Controllers
         [HttpGet]
         public IList<int> Ejercicio10()
         {
-            IList<int> lista = new List<int> { 10, 8, 1, 7, 4, 5, 2, 3, 1, 1, 10, 2, 10};
+            IList<int> lista = new List<int> { 10, 8, 1, 7, 4, 5, 2, 3, 1, 1, 10, 2, 10 };
 
             var repetidos = lista.GroupBy(x => x).Where(x => x.Count() > 1).ToList();
 

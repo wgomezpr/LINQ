@@ -1,6 +1,7 @@
 ﻿using LINQ.DomainLayer.DTO.Entities;
 using LINQ.DomainLayer.Interfaces;
 using LINQ.InfrastructureLayer.Data.Context;
+using Microsoft.EntityFrameworkCore;
 
 namespace LINQ.InfrastructureLayer.Repositories
 {
@@ -16,27 +17,41 @@ namespace LINQ.InfrastructureLayer.Repositories
 
         public OrderEntity Get(int OrderID)
         {
-            throw new NotImplementedException();
+            return _context.Orders.Where(x => x.OrderID == OrderID).FirstOrDefault() ?? new OrderEntity();
         }
 
         public IList<OrderEntity> GetAll()
         {
-            throw new NotImplementedException();
+            return _context.Orders.ToList();
         }
 
         public int Insert(OrderEntity entity)
         {
-            throw new NotImplementedException();
+            _context.Entry(entity).State = EntityState.Added;
+            _context.Orders.Add(entity);
+            _context.SaveChanges();
+
+            return entity.OrderID;
         }
 
         public int Update(OrderEntity entity)
         {
-            throw new NotImplementedException();
+            _context.Entry(entity).State = EntityState.Modified;
+            _context.Orders.Update(entity);
+            _context.SaveChanges();
+
+            return entity.OrderID;
         }
 
         public int Delete(int OrderID)
         {
-            throw new NotImplementedException();
+            var obj = _context.Orders.First(x => x.OrderID == OrderID);
+
+            _context.Entry(obj).State = EntityState.Deleted;
+            _context.Orders.Remove(obj);
+            _context.SaveChanges();
+
+            return OrderID;
         }
     }
 }
