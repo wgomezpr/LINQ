@@ -5,12 +5,12 @@ namespace LINQ.WebAPI.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
-    public class Ejercicios_AvanzadosController : ControllerBase
+    public class EjerciciosAvanzadosController : ControllerBase
     {
         // Instantiate the Service
         private readonly ICategoryService _service;
 
-        public Ejercicios_AvanzadosController(ICategoryService service)
+        public EjerciciosAvanzadosController(ICategoryService service)
         {
             _service = service;
         }
