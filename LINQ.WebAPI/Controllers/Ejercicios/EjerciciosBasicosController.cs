@@ -177,15 +177,104 @@ namespace LINQ.WebAPI.Controllers.Ejercicios
             return cantidad;
         }
 
-        //11. Encontrar el número más pequeño en una lista de enteros.
-        //12. Obtener la concatenación de todas las cadenas en una lista.
-        //13. Filtrar una lista de objetos para obtener los que no cumplen una condición.
-        //14. Obtener los elementos mayores que un valor dado en una lista de enteros.
-        //15. Obtener los elementos de una lista que sean múltiplos de un número dado.
-        //16. Verificar si todos los elementos de una lista cumplen una cierta condición.
-        //17. Encontrar el índice del primer elemento que cumpla una condición en una lista.
-        //18. Obtener los elementos que se repiten exactamente dos veces en una lista.
-        //18. Obtener la cantidad de caracteres de cada cadena en una lista de cadenas.
-        //20. Obtener los elementos de una lista que contengan una subcadena específica.
+        /// <summary>
+        /// 11. Encontrar el número más pequeño en una lista de enteros.
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public int Ejercicio11()
+        {
+            return Enumerable.Range(1, 1).FirstOrDefault();
+        }
+
+        /// <summary>
+        /// 12. Obtener la concatenación de todas las cadenas en una lista.
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public int Ejercicio12()
+        {
+            return Enumerable.Range(1, 1).FirstOrDefault();
+        }
+
+        /// <summary>
+        /// 13. Filtrar una lista de objetos para obtener los que no cumplen una condición.
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public int Ejercicio13()
+        {
+            return Enumerable.Range(1, 1).FirstOrDefault();
+        }
+
+        /// <summary>
+        /// 14. Obtener los elementos mayores que un valor dado en una lista de enteros.
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public int Ejercicio14()
+        {
+            return Enumerable.Range(1, 1).FirstOrDefault();
+        }
+
+        /// <summary>
+        /// 15. Obtener los elementos de una lista que sean múltiplos de un número dado.
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public int Ejercicio15()
+        {
+            return Enumerable.Range(1, 1).FirstOrDefault();
+        }
+
+        /// <summary>
+        /// 16. Verificar si todos los elementos de una lista cumplen una cierta condición.
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public int Ejercicio16()
+        {
+            return Enumerable.Range(1, 1).FirstOrDefault();
+        }
+
+        /// <summary>
+        /// 17. Encontrar el índice del primer elemento que cumpla una condición en una lista.
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public int Ejercicio17()
+        {
+            return Enumerable.Range(1, 1).FirstOrDefault();
+        }
+
+        /// <summary>
+        /// 18. Obtener los elementos que se repiten exactamente dos veces en una lista.
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public int Ejercicio18()
+        {
+            return Enumerable.Range(1, 1).FirstOrDefault();
+        }
+
+        /// <summary>
+        /// 19. Obtener la cantidad de caracteres de cada cadena en una lista de cadenas.
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public int Ejercicio19()
+        {
+            return Enumerable.Range(1, 1).FirstOrDefault();
+        }
+
+        /// <summary>
+        /// 20. Obtener los elementos de una lista que contengan una subcadena específica.
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public int Ejercicio20()
+        {
+            return Enumerable.Range(1, 1).FirstOrDefault();
+        }
     }
 }

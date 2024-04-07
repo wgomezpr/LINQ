@@ -82,11 +82,11 @@ namespace LINQ.WebAPI.Controllers.Ejercicios
         public decimal Ejercicio05()
         {
             decimal suma = 0;
-            var res = _productService.GetAll();
 
+            var res = _productService.GetAll();
             if (res.Status)
             {
-                suma = res.Value.Where(x => x.CategoryID == 1 && x.ProductID == 1).ToList().Sum(x => x.UnitPrice);
+                suma = res.Value.Where(x => x.SupplierID == 1 && x.CategoryID == 1).ToList().Sum(x => x.UnitPrice);
             }
 
             return suma;
@@ -130,27 +130,18 @@ namespace LINQ.WebAPI.Controllers.Ejercicios
         /// 8.  Dividir una lista en grupos de un tamaño específico.
         /// </summary>
         /// <returns></returns>
-        //[HttpGet]
-        //public IList<CategoryEntity> Ejercicio07()
-        //{
-        //    IList<CategoryEntity> categorias = new List<CategoryEntity>();
-        //    //IList<CategoryEntity> categorias1 = new List<CategoryEntity>();
-        //    var res = _categoryService.GetAll();
-
-        //    if (res.Status)
-        //    {
-        //        var categorias1 = res.Value.GroupBy((item, index) => index / 5);
-        //    }
-
-        //    return categorias1;
-        //}
+        [HttpGet]
+        public int Ejercicio08()
+        {
+            return Enumerable.Range(1, 1).FirstOrDefault();
+        }
 
         /// <summary>
         /// 9.  Encontrar el primer y el último elemento de una lista.
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        public IList<CategoryEntity> Ejercicio08()
+        public IList<CategoryEntity> Ejercicio09()
         {
             IList<CategoryEntity> categoriasaux = new List<CategoryEntity>();
             var res = _categoryService.GetAll();
@@ -180,15 +171,104 @@ namespace LINQ.WebAPI.Controllers.Ejercicios
             return lista;
         }
 
-        //11. Encontrar el rango de valores(diferencia entre el máximo y el mínimo) en una lista de enteros.
-        //12. Obtener los elementos que tienen una propiedad nula en una lista de objetos.
-        //13. Combinar dos listas de objetos y seleccionar solo las propiedades comunes.
-        //14. Obtener los elementos de una lista que están dentro de un rango específico.
-        //15. Verificar si al menos un elemento de una lista cumple una cierta condición.
-        //16. Contar la cantidad de elementos distintos en una lista.
-        //17. Dividir una lista en dos, una con los elementos pares y otra con los impares.
-        //18. Obtener el tercer elemento más grande de una lista de enteros.
-        //18. Obtener la suma de los cuadrados de los elementos en una lista.
-        //20. Eliminar los elementos duplicados de una lista manteniendo el orden original.
+        /// <summary>
+        /// 11. Encontrar el rango de valores(diferencia entre el máximo y el mínimo) en una lista de enteros.
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public int Ejercicio11()
+        {
+            return Enumerable.Range(1, 1).FirstOrDefault();
+        }
+
+        /// <summary>
+        /// 12. Obtener los elementos que tienen una propiedad nula en una lista de objetos.
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public int Ejercicio12()
+        {
+            return Enumerable.Range(1, 1).FirstOrDefault();
+        }
+
+        /// <summary>
+        /// 13. Combinar dos listas de objetos y seleccionar solo las propiedades comunes.
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public int Ejercicio13()
+        {
+            return Enumerable.Range(1, 1).FirstOrDefault();
+        }
+
+        /// <summary>
+        /// 14. Obtener los elementos de una lista que están dentro de un rango específico.
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public int Ejercicio14()
+        {
+            return Enumerable.Range(1, 1).FirstOrDefault();
+        }
+
+        /// <summary>
+        /// 15. Verificar si al menos un elemento de una lista cumple una cierta condición.
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public int Ejercicio15()
+        {
+            return Enumerable.Range(1, 1).FirstOrDefault();
+        }
+
+        /// <summary>
+        /// 16. Contar la cantidad de elementos distintos en una lista.
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public int Ejercicio16()
+        {
+            return Enumerable.Range(1, 1).FirstOrDefault();
+        }
+
+        /// <summary>
+        /// 17. Dividir una lista en dos, una con los elementos pares y otra con los impares.
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public int Ejercicio17()
+        {
+            return Enumerable.Range(1, 1).FirstOrDefault();
+        }
+
+        /// <summary>
+        /// 18. Obtener el tercer elemento más grande de una lista de enteros.
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public int Ejercicio18()
+        {
+            return Enumerable.Range(1, 1).FirstOrDefault();
+        }
+
+        /// <summary>
+        /// 19. Obtener la suma de los cuadrados de los elementos en una lista.
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public int Ejercicio19()
+        {
+            return Enumerable.Range(1, 1).FirstOrDefault();
+        }
+
+        /// <summary>
+        /// 20. Eliminar los elementos duplicados de una lista manteniendo el orden original.
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public int Ejercicio20()
+        {
+            return Enumerable.Range(1, 1).FirstOrDefault();
+        }
     }
 }
