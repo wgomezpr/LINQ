@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace LINQ.WebAPI.Controllers
 {
+    [Produces("application/json")]
     [Route("api/[controller]/[action]")]
     [ApiController]
     public class EmployeeController : ControllerBase

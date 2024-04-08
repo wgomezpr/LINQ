@@ -1,12 +1,9 @@
 ﻿using LINQ.ApplicationLayer.Services.CategoryService;
-using LINQ.DomainLayer.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
-using System.Text.RegularExpressions;
-using System;
 
 namespace LINQ.WebAPI.Controllers.Ejercicios
 {
+    [Produces("application/json")]
     [Route("api/[controller]/[action]")]
     [ApiController]
     public class EjerciciosAvanzadosController : ControllerBase
